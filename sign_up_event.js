@@ -23,7 +23,7 @@ function loginClicked() {
     console.log("Password: ", password); */
 }
 
-// Check for empty strings.
+// Check for empty string input.
 function isEmpty(firstName, lastName, email, password) {
     return ((firstName === "") || (lastName === "") || (email === "") || (password === ""));
 }
