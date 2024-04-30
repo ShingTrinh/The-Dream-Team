@@ -9,18 +9,18 @@ function loginClicked() {
     var email = document.getElementById("adjustTextbox3").value;
     var password = document.getElementById("adjustTextbox4").value;
 
-    if ((isEmpty(firstName, lastName, email, password))) {
+ // Validate input.
+ /* if ((isEmpty(firstName, lastName, email, password))) {
         alert("Invalid credentials.");
     }  else {
-        
-        console.log("Hello");//window.location = next page;
-    } 
+        create new person;
+        window.location = next page;
+    } */
 
  /* console.log("First name: ", firstName);
     console.log("Last name: ", lastName);
     console.log("Email: ", email);
     console.log("Password: ", password); */
-
 }
 
 // Check for empty strings.
