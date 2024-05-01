@@ -286,7 +286,7 @@ class Address {
   
   function main() {
       let start = new Driver();
-      done = start.starter();
+      done = start.start();
   }
   
   
