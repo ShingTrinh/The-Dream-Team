@@ -12,7 +12,7 @@ function loginClicked() {
  // Validate input.
  /* if ((isEmpty(firstName, lastName, email, password))) {
         alert("Invalid credentials.");
-    }  else {
+    } else {
         create new person;
         window.location = next page;
     } */
