@@ -13,6 +13,7 @@ function fetchEvents() {
 
 function displayEvents(events) {
   var eventContainer = document.getElementById('eventContainer');
+
   eventContainer.innerHTML = ''; 
 
   if (events.length === 0) {
@@ -78,11 +79,63 @@ function showEditForm(event) {
     <input type="text" id="timeInput" value="${event.time}"><br>
     <label for="categoriesInput">Categories</label>
     <input type="text" id="categoriesInput" value="${event.categories}"><br>
-    <button>Save Changes</button>
+    <button id="saveChangesBtn">Save Changes</button>
     `;
 
   openModal(modal);
+
+  const titleInput = document.getElementById('titleInput');
+  const descriptionInput = document.getElementById('descriptionInput');
+  const dateInput = document.getElementById('dateInput');
+  const timeInput = document.getElementById('timeInput');
+  const categoriesInput = document.getElementById('categoriesInput');
+
+  const saveChangesBtn = modalBody.querySelector('#saveChangesBtn');
+  saveChangesBtn.addEventListener('click', () => {
+    event.title = titleInput.value;
+    event.description = descriptionInput.value;
+    event.date = dateInput.value;
+    event.time = timeInput.value;
+    event.categories = categoriesInput.value;
+
+    console.log('title after save changes ' + event.title)
+    console.log('title after save changes ' + event.description)
+    console.log('title after save changes ' + event.date)
+    console.log('title after save changes ' + event.time)
+    console.log('title after save changes ' + event.categories)
+
+      // Send updated event data to server
+    saveChangesToDatabase(event);
+
+  });
+  
 }
+
+function saveChangesToDatabase(event) {
+  console.log('Event before sending:', event);
+
+  fetch('/updateEvent', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json' // Set content type to JSON
+      },
+      body: JSON.stringify(event) // Stringify the event object
+  })
+  .then(response => {
+      if (!response.ok) {
+          throw new Error('Failed to save changes');
+      }
+      console.log("HELLO IT WORKS\n");
+  })
+  .catch(error => {
+      console.error('Error saving changes:', error);
+  });
+}
+
+
+
+
+
 
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-button]')

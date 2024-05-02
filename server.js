@@ -5,6 +5,8 @@ const path = require('path');
 const app = express();
 const port = 3000;
 
+app.use(express.json());
+
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'hornets',
@@ -36,22 +38,28 @@ app.get('/getEvents', function(req, res){
 });
 
 app.post('/updateEvent', function(req, res){
-    const { id, title, description, date, time, category } = req.body;
-    const query = 'UPDATE mytable SET title=?, description=?, date=?, time=?, categories=? WHERE id=?';
+  const event = req.body;
+  const { id, title, description, date, time, categories } = event;
+  const query = 'UPDATE events SET title=?, description=?, date=?, time=?, categories=? WHERE id=?';
 
-    connection.query(query, [title, description, date, time, categories, id], function(error, results){
+  // Convert id to integer
+  const eventId = parseInt(id);
+
+  connection.query(query, [title, description, date, time, categories, eventId], function(error, results){
       if (error) {
-        res.status(500).json({ error: error.message });
+          res.status(500).json({ error: error.message });
       } else {
-        if (results.affectedRows === 0) {
-          res.status(404).json({ error: 'Record not found' });
-          console.log("NOT FOUND IN SERVERJS")
-        } else {
-          res.sendStatus(200);
-        }
+          if (results.affectedRows === 0) {
+              res.status(404).json({ error: 'Record not found' });
+              console.log("NOT FOUND IN SERVERJS")
+          } else {
+              res.sendStatus(200);
+          }
       }
-    });
   });
+});
+
+
 
 app.listen(port, function (){
   console.log(`Server running on port ${port}`);
