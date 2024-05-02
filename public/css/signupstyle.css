@@ -1,0 +1,391 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Ensure no margin or padding on body and html */
+  body, html {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Make the container fill the entire viewport */
+  .volunteer-sign-up .overlap-wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff; /* Optional background color */
+  }
+  
+  /* Make the image fill the container */
+  .volunteer-sign-up .overlap {
+    width: 100%;
+    height: 100%;
+    background-image: url(https://cdn.animaapp.com/projects/6620354164a667b0f90585ee/releases/6620361d1158c045fb50b5b6/img/faeb9smxiaey7kk-1.png);
+    background-size: cover;
+    background-position: center;
+  }
+  
+    .volunteer-sign-up .frame {
+    position: relative;
+    width: 1036px;
+    height: 790px;
+    top: 8%;
+    left: 23%;
+    background-color: #2a8a09;
+    border-radius: 15px;
+    overflow: hidden;
+    }
+
+    .volunteer-sign-up .overlap-group {
+    position: absolute;
+    width: 599px;
+    height: 404px;
+    top: 24px;
+    left: 216px;
+    }
+
+    .volunteer-sign-up .h1 {
+    position: absolute;
+    width: 525px;
+    height: 404px;
+    top: 0;
+    left: 0;
+    }
+
+    .volunteer-sign-up .h {
+    position: absolute;
+    width: 160px;
+    height: 360px;
+    top: -10px;
+    bottom: 0px;
+    left: -130px;
+    right: 0px;
+  
+    }
+
+    .volunteer-sign-up .text-wrapper {
+    position: absolute;
+    top: -1px;
+    left: 110px;
+    font: "Katibeh";
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 200px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    }
+
+    .volunteer-sign-up .HELPERS {
+    position: absolute;
+    width: 176px;
+    height: 92px;
+    top: 103px;
+    left: 0px;
+    }
+
+    .volunteer-sign-up .text-wrapper-2 {
+    position: absolute;
+    top: 11px;
+    left: 105px;
+    font-family: "khand", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    color: #ffffff;
+    font-size: 60px;
+    letter-spacing: 0;
+    line-height: normal;
+    }
+    .volunteer-sign-up .text-wrapper-10 {
+      position: absolute;
+      top: -1px;
+      left: 110px;
+      font-family: "khand", sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      color: #ffffff;
+      font-size: 40px;
+      letter-spacing: 0;
+      line-height: normal;
+      }
+
+    .volunteer-sign-up .ORNET {
+    position: absolute;
+    width: 130px;
+    height: 92px;
+    top: 42px;
+    left: 0px;
+    }
+
+    .volunteer-sign-up .line {
+    position: absolute;
+    width: 5px;
+    height: 168px;
+    top: 26px;
+    left: 318px;
+    }
+
+    .volunteer-sign-up .p {
+    position: absolute;
+    width: 408px;
+    top: 217px;
+    left: 25%;
+    font-family: "Inter", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    }
+
+    .volunteer-sign-up .text-wrapper-3 {
+    position: absolute;
+    width: 382px;
+    top: 285px;;
+    left: 40px;
+    font-family: "Inter", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    }
+
+    .volunteer-sign-up .rectangle {
+    top: 350px;
+    left: 169px;
+    position: absolute;
+    width: 323px;
+    height: 31px;
+    background-color: #ffffff;
+    }
+
+    .volunteer-sign-up .text-wrapper-4 {
+    padding: 8px 16px;
+    border-radius: 5px;
+    position: absolute;
+    width: 40%;
+    top: 82px;
+    left: 350px;
+    font-family: "Inter", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+    
+    }
+
+
+    .volunteer-sign-up .overlap-2 {
+    position: absolute;
+    width: 452px;
+    height: 46px;
+    top: 435px;
+    left: 40px;
+    }
+
+    .volunteer-sign-up .text-wrapper-5 {
+    position: absolute;
+    width: 255px;
+    top: -80px;
+    left: 0;
+    font-family: "Inter", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    }
+
+    .volunteer-sign-up .rectangle-2 {
+    top: 1px;
+    left: 129px;
+    position: absolute;
+    width: 323px;
+    height: 31px;
+    background-color: #ffffff;
+    }
+
+    .volunteer-sign-up .overlap-3 {
+    position: absolute;
+    width: 452px;
+    height: 47px;
+    top: 520px;
+    left: 40px;
+    }
+
+    .volunteer-sign-up .text-wrapper-6 {
+    position: absolute;
+    width: 221px;
+    top: -85px;
+    left: 0;
+    font-family: "Inter", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    }
+
+    .volunteer-sign-up .overlap-4 {
+    position: absolute;
+    width: 452px;
+    height: 34px;
+    top: 600px;
+    left: 40px;
+    }
+
+    .volunteer-sign-up .text-wrapper-7 {
+    position: absolute;
+    width: 175px;
+    top: -85px;
+    left: 0;
+    font-family: "Inter", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    }
+
+    .volunteer-sign-up .overlap-5 {
+        position: absolute;
+        width: 452px;
+        height: 34px;
+        top: 600px;
+        left: 40px;
+        }
+    
+    
+        .volunteer-sign-up .text-wrapper-8 {
+        position: absolute;
+        width: 175px;
+        top: -10px;
+        left: 0;
+        font-family: "Inter", Helvetica;
+        font-weight: 400;
+        color: #ffffff;
+        font-size: 20px;
+        letter-spacing: 0;
+        line-height: normal;
+        }
+
+    .volunteer-sign-up #SubmitButton {
+      background-color:#fbc20c;
+      border: yes; 
+      border-radius: 8px;
+      display: inline-flex;
+      font-size: 32px;
+      font-family: "Inter", Helvetica;
+      left: 180px;
+      padding: 30px 90px;
+      position: absolute;
+      top: 650px;
+      cursor: pointer;
+    }
+    
+    .volunteer-sign-up #SubmitButton:hover {
+      color: white;
+      background-color: #fbc20c;
+    }
+
+    .volunteer-sign-up .vector {
+    position: absolute;
+    width: 42px;
+    height: 39px;
+    top: 618px;
+    left: -180px;
+    }
+
+    .volunteer-sign-up .img {
+    position: absolute;
+    width: 41px;
+    height: 39px;
+    top: 677px;
+    left: -180px;
+    }
+
+    .volunteer-sign-up #adjustTextbox {
+      position: absolute;
+      width: 315px;
+      height: 28px;
+      top: 285px;
+      left: 169px;
+      padding: 1px;
+      font-size: 20px;  
+    }
+    
+    .volunteer-sign-up #adjustTextbox2 {
+      position: absolute;
+      width: 315px;
+      height: 28px;
+      top: -80px;
+      left: 131px;
+      padding: 1px;
+      font-size: 20px;  
+    }
+
+    .volunteer-sign-up #adjustTextbox3 {
+      position: absolute;
+      width: 315px;
+      height: 28px;
+      top: -88px;
+      left: 131px;
+      padding: 1px;
+      font-size: 20px;  
+    }
+
+    .volunteer-sign-up #adjustTextbox4 {
+      position: absolute;
+      width: 315px;
+      height: 28px;
+      top: -88px;
+      left: 131px;
+      padding: 1px;
+      font-size: 20px;  
+    }
+    .volunteer-sign-up #adjustTextbox5 {
+        position: absolute;
+        width: 315px;
+        height: 28px;
+        top: -10px;
+        left: 131px;
+        padding: 1px;
+        font-size: 20px;  
+      }
+      .backbtn {
+        background-color: #fbc20c;
+        border: yes; 
+        border-radius: 8px;
+        font-size: 25px;
+        font-family: "Inter", Helvetica;
+        padding: 15px 35px;
+        position: relative;
+        left: -185px; /* Position relative to its normal position */
+        cursor: pointer;
+
+    }
+    .backbtn:hover{
+      color: white;
+      background-color: #fbc20c;
+    }
+    
+      /*
+      background-color:#fbc20c;
+      border: yes; 
+      border-radius: 8px;
+      display: inline-flex;
+      font-size: 32px;
+      font-family: "Inter", Helvetica;
+      left: 180px;
+      padding: 30px 90px;
+      position: absolute;
+      top: 650px;
+      cursor: pointer;
+      */

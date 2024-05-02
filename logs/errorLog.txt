@@ -1,0 +1,2 @@
+20240502	10:07:13	b294d205-328a-48e4-a214-dd18a061838f	Error: ENOENT: no such file or directory, stat 'C:\Users\brkeo\Documents\projects\views\SignUp.html'
+20240502	10:10:28	540b4669-ca88-478b-bd6e-78ee7475209f	Error: ENOENT: no such file or directory, stat 'C:\Users\brkeo\Documents\projects\TEST\routes\views\index.html'
