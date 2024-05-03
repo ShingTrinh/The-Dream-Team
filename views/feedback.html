@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Feedback
+    </title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        background-image: linear-gradient(to bottom, rgba(14, 143, 0, 0.71) 0%, rgba(14, 143, 0, 0.71) 15%, rgb(108, 189, 97) 15%, rgb(108, 189, 97) 100%);
+        min-height: 100vh;
+    }
+
+    .header{
+        color: white;
+        text-align: center;
+        position: relative;
+        margin-top: 0;
+        scale: +400%;
+
+    }
+
+    .button {
+        border: none;
+        background-color: red;
+        color: white;
+        text-align: center;
+        padding-top: 1px;
+        padding-right: 5px;
+        padding-left: 5px;
+        padding-bottom: 1px;
+        position: relative;
+        margin-left: 3%;
+        margin-top: 3%;
+        scale: +150%;
+    }
+
+    .container{
+        text-align: center;
+    }
+
+    .text1{
+        margin-top: 10%;
+        margin-left: 22%;
+    }
+</style>
+<button class="button" onclick="alert ('This takes you back to the previous page.')">x</button>
+<div class="header">
+    HOW WAS YOUR EXPERIENCE?
+</div>
+
+<body style=" background-color: green">
+<form action="">
+    <div class="text1">
+        <label for="feedBack">Feedback:</label>
+        <textarea name="txtFeedback" rows="20" cols="85" id="feedBack"></textarea>
+        <br><br>
+    </div>
+
+    <div class="container">
+        <input type="submit" value="submit">
+    </div>
+</form>
+</body>
+</html>
