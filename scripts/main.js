@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const script = document.createElement('script');
         script.src = 'scripts/register.js';
         document.body.appendChild(script);
-    } else if (path.endsWith('login.html')) {
+    } else if (path.endsWith('hh_login_page.html')) {
         const script = document.createElement('script');
         script.src = 'scripts/login.js';
         document.body.appendChild(script);
