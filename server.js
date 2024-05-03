@@ -43,6 +43,8 @@ app.use(express.static(path.join(__dirname, '/scripts')));
 
 //routes
 app.use('/',require('./routes/root'));
+app.use('/register',require('./routes/register'));
+app.use('/auth',require('./routes/auth'));
 
 app.all('*', (req,res) => {
   res.status(404);
@@ -55,41 +57,6 @@ app.all('*', (req,res) => {
   }
 
 });
-app.get('/getEvents', function(req, res){
-  const query = 'SELECT * FROM events';
-
-  connection.query(query, function(error, results){
-    if (error) {
-      res.status(500).json({ error: error.message });
-    } else {
-      res.json(results);
-    }
-  });
-
-});
-
-app.post('/updateEvent', function(req, res){
-  const event = req.body;
-  const { id, title, description, date, time, categories } = event;
-  const query = 'UPDATE events SET title=?, description=?, date=?, time=?, categories=? WHERE id=?';
-
-  // Convert id to integer
-  const eventId = parseInt(id);
-
-  connection.query(query, [title, description, date, time, categories, eventId], function(error, results){
-      if (error) {
-          res.status(500).json({ error: error.message });
-      } else {
-          if (results.affectedRows === 0) {
-              res.status(404).json({ error: 'Record not found' });
-              console.log("NOT FOUND IN SERVERJS")
-          } else {
-              res.sendStatus(200);
-          }
-      }
-  });
-});
-
 
 app.use(errorHandler);
 
