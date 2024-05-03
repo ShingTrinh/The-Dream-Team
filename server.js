@@ -1,12 +1,18 @@
+require('dotenv').config();
 const express = require('express');
 const mysql = require('mysql');
 const path = require('path');
 const cors = require('cors');
 const {logger} = require('./middleware/logEvents');
 const errorHandler = require('./middleware/errorHandler');
+const mongoose = require('mongoose');
+const connectDB = require('./config/dbConn')
+const PORT = 3000;
+
+//conect to mongodb
+connectDB();
 
 const app = express();
-const PORT = 3000;
 
 //custom middleware logger
 app.use(logger);
@@ -29,27 +35,15 @@ app.use(cors(corsOptions));
 app.use(express.urlencoded( {extended: false}));
 app.use(express.json());
 
-const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'hornets',
-  password: 'secret123',
-  database: 'hornet_helpers'
-});
 
-connection.connect(function(err){
-  if (err) {
-    console.error('Error connecting to MySQL:', err);
-    return;
-  }
-  console.log('Connected to MySQL');
-});
-
+//serve static files
+app.use(express.static(path.join(__dirname)));
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(express.static(path.join(__dirname, '/scripts')));
-app.use('/subdir',express.static(path.join(__dirname, '/public')));
 
+//routes
 app.use('/',require('./routes/root'));
-
+app.use('/employees',require('./routes/api/employees'));
 
 app.all('*', (req,res) => {
   res.status(404);
@@ -60,8 +54,8 @@ app.all('*', (req,res) => {
   }else {
     res.type('txt').send("404 Not Found");
   }
-});
 
+});
 app.get('/getEvents', function(req, res){
   const query = 'SELECT * FROM events';
 
@@ -97,30 +91,13 @@ app.post('/updateEvent', function(req, res){
   });
 });
 
-app.post('/signup', function(req, res) {
-  const { firstName, lastName, email, studentID, password } = req.body;
-  console.log("IN SIGNUP");
-
-  console.log("first name: " + firstName);
-  console.log("last name: " + lastName);
-  console.log("email: " + email);
-  console.log("studentID: " + studentID);
-  console.log("password: " + password);
-
-  const query = 'INSERT INTO users (first_name, last_name, email, studentID, password_hash) VALUES (?, ?, ?, ?, ?)';
-  connection.query(query, [firstName, lastName, email, studentID, password], function(error, results) {
-    if (error) {
-      res.status(500).json({ error: error.message });
-    } else {
-      res.sendStatus(200);
-    }
-  });
-
-});
 
 app.use(errorHandler);
 
 
-app.listen(PORT, function (){
-  console.log(`Server running on PORT ${PORT}`);
+mongoose.connection.once('open', () => {
+    console.log('Connected to MongoDB');
+
+    app.listen(PORT, () => console.log(`Server running on Port ${PORT}`));
+
 });
