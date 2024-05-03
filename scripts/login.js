@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (error) {
             console.error('Login error:', error.message);
             alert('Login failed. Please check your credentials.');
+             window.location.replace("http://index.html");
         }
     });
 });
