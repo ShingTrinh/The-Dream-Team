@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         try {
-            const response = await fetch('', {
+            const response = await fetch('http://127.0.0.1:3000', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
