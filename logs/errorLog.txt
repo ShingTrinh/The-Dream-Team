@@ -1,2 +1,4 @@
 20240502	10:07:13	b294d205-328a-48e4-a214-dd18a061838f	Error: ENOENT: no such file or directory, stat 'C:\Users\brkeo\Documents\projects\views\SignUp.html'
 20240502	10:10:28	540b4669-ca88-478b-bd6e-78ee7475209f	Error: ENOENT: no such file or directory, stat 'C:\Users\brkeo\Documents\projects\TEST\routes\views\index.html'
+20240502	21:04:32	5e3e549b-35fa-468d-b090-3b734ecae6e4	Error: ENOENT: no such file or directory, stat 'C:\Users\brkeo\Documents\GitHub\The-Dream-Team\views\createEvent.html'
+20240502	21:04:36	e988172e-cd14-4c19-908a-e5cc4809d336	Error: ENOENT: no such file or directory, stat 'C:\Users\brkeo\Documents\GitHub\The-Dream-Team\views\adminEvent.html'
