@@ -17,5 +17,13 @@ router.get('/createEvent.html(.html)?', (req,res) => {
 router.get('/adminEvent.html(.html)?', (req,res) => {
     res.sendFile(path.join(__dirname,'..','views','adminEvent.html'));
 });
+
+router.get('/volup.html(.html)?', (req,res) => {
+    res.sendFile(path.join(__dirname,'..','views','volup.html'));
+});
+  
+router.get('/hh_login_page(.html)?', (req,res) => {
+    res.sendFile(path.join(__dirname,'..','views','hh_login_page.html'));
+});
   
 module.exports = router;

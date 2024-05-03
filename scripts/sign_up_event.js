@@ -14,7 +14,6 @@ function backClicked() {
 
 function registerUser(userData) {
     console.log('JSON stringified userData:', JSON.stringify(userData));
-
     
     fetch('/register', {
         method: 'POST',
@@ -25,10 +24,11 @@ function registerUser(userData) {
     })
     .then(response => {
         if (response.ok) {
-            // Registration successful
+            // Event creation successful
             console.log("Registration successful!");
             // Redirect user to login page or dashboard
-            window.location.href = "/login.html";
+            window.alert('Registration success!');
+            window.location.href = "./volup.html";
         } else {
             // Registration failed
             console.error('Error during signup:', response.statusText);
@@ -39,6 +39,7 @@ function registerUser(userData) {
         console.error('Error during signup:', error);
         alert('An error occurred during signup. Please try again later.');
     });
+
 }
 
 // Function for reading user input after button is clicked.

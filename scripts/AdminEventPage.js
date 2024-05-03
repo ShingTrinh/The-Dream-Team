@@ -1,11 +1,19 @@
 const createEventBtn = document.getElementById('createEvent');
+const signOutBtn = document.getElementById('signOut');
+
 const myPopup = document.getElementById('Popup');
 
 createEventBtn.addEventListener('click',createEvent);
+signOutBtn.addEventListener('click', signOut);
 
 function createEvent() {
   console.log("CREATE!");
   window.location.href = "../views/createEvent2.html";
+}
+
+function signOut() {
+  console.log("SIGNOUT!");
+  window.location.href = "../views/hh_login_page.html";
 }
 
 

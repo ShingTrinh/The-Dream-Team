@@ -57,22 +57,29 @@
     </div>
 
 <body style=" background-color: green">
-    <form action="">
         <div class="text1">
             <label for="eventName">Event Name:</label>
             <textarea name="txtTitle" rows="1" cols="85" id="eventName"></textarea><br><br>
 
             <label for="eventDate">Event Date:&nbsp;&nbsp;</label>
-            <textarea name="txtDate" rows="1" cols="85" id="eventDate"></textarea><br><br>
+            <input type = "date" rows="1" cols="85" id="eventDate"><br><br>
+
+            <label for="eventTime">Event Time:&nbsp;&nbsp;</label>
+            <textarea name="txtTime" rows="1" cols="85" id="eventTime"></textarea><br><br>
 
             <label for="eventDescription">Description:&nbsp;</label>
             <textarea name="txtDescription" rows="10" cols="85" id="eventDescription"></textarea>
                 <br><br>
+
+            <label for="eventCategories">Event Categories:&nbsp;&nbsp;</label>
+            <textarea name="txtCategories" rows="1" cols="85" id="eventCategories"></textarea><br><br>
+
         </div>
 
         <div class="container">
-            <input type="submit" value="submit">
+            <button id = "submitBtn">Submit</button>
         </div>
-    </form>
+
+    <script src="../scripts/CreateEvent.js"></script>
 </body>
 </html>

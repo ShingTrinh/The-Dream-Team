@@ -7,14 +7,20 @@ const getAllEmployees = async (req, res) => {
 }
 
 const createNewEmployee = async (req, res) => {
-    if (!req?.body?.firstname || !req?.body?.lastname) {
-        return res.status(400).json({ 'message': 'First and last names are required' });
-    }
 
+    console.log('Request body:', req.body);
+
+    const { title, date, description,time,categories } = req.body;
+
+    if (!title || !date || !description || !time || !categories) return res.status(400).json({ 'message': 'Please Fill Out All Boxes.' });
+    console.log("passed");
     try {
         const result = await Employee.create({
-            firstname: req.body.firstname,
-            lastname: req.body.lastname
+            title: req.body.title,
+            date: req.body.date,
+            description: req.body.description,
+            time: req.body.time,
+            categories: req.body.cateogires
         });
 
         res.status(201).json(result);
