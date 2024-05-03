@@ -17,3 +17,15 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.appendChild(script);
     }
 });
+
+regBtn.addEventListener('click',offerRegister);
+logBtn.addEventListener('click',offerLogin);
+
+function offerRegister() {
+  window.location.href = "../views/signup.html";
+}
+function offerLogin() {
+    window.location.href = "../views/hh_login_page.html";
+  }
+  
+

@@ -52,7 +52,7 @@ app.use('/refresh',require('./routes/refresh'));
 app.use('/logout',require('./routes/logout')); 
 
 
-app.use(verifyJWT); //everything under this line is needs to be verified by JWT
+//app.use(verifyJWT); //everything under this line is needs to be verified by JWT
 app.use('/employees',require('./routes/api/employees')); //admins
 
 
