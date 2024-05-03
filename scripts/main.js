@@ -5,15 +5,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (path.endsWith('register.html')) {
         const script = document.createElement('script');
-        script.src = 'js/register.js';
+        script.src = 'scripts/register.js';
         document.body.appendChild(script);
     } else if (path.endsWith('login.html')) {
         const script = document.createElement('script');
-        script.src = 'js/login.js';
+        script.src = 'scripts/login.js';
         document.body.appendChild(script);
     } else if (path.endsWith('dashboard.html')) {
         const script = document.createElement('script');
-        script.src = 'js/dashboard.js';
+        script.src = 'scripts/dashboard.js';
         document.body.appendChild(script);
     }
 });
