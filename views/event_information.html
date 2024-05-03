@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .volunteer-page-with {
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+      }
+
+      .volunteer-page-with .overlap-wrapper {
+        background-color: #ffffff;
+        width: 1903px;
+        height: 1062px;
+        border: 0px solid;
+      }
+
+      .volunteer-page-with .overlap {
+        position: relative;
+        height: 1074px;
+        top: -12px;
+        background-image: url(https://cdn.animaapp.com/projects/6620354164a667b0f90585ee/releases/6620361d1158c045fb50b5b6/img/faeb9smxiaey7kk-1.png);
+        background-size: cover;
+        background-position: 50% 50%;
+      }
+
+      .volunteer-page-with .frame {
+        position: absolute;
+        width: 1887px;
+        height: 88px;
+        top: 0px;
+        left: 0;
+        background-color: #2a8a09;
+        border-radius: 0px 0px 10px 10px;
+        overflow: hidden;
+      }
+
+      .volunteer-page-with #signOutButton {
+        display: flex;
+        width: 157px;
+        height: 39px;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 12px 25px;
+        position: absolute;
+        top: 20px;
+        left: 21px;
+        color: #fbf10b;
+        background-color: #2a8a09;
+        border-radius: 8px;
+        border: 1px solid;
+        border-color: #fbf10b;
+        font-family: "Inter", Helvetica;
+        font-size: 15px;
+      }
+
+      .volunteer-page-with #signOutButton:hover {
+        background-color: #a8e792;
+      } 
+    
+      .volunteer-page-with .vector {
+        position: relative;
+        width: 21px;
+        height: 18px;
+        margin-top: -1.5px;
+        margin-bottom: -1.5px;
+      }
+
+      .volunteer-page-with .text-wrapper {
+        position: relative;
+        width: fit-content;
+        margin-top: -2px;
+        font-family: "Inter", Helvetica;
+        font-weight: 400;
+        color: #fbf10b;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+
+      .volunteer-page-with .frame-2 {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 12px 10px;
+        position: absolute;
+        top: 18px;
+        left: 1659px;
+      }
+
+      .volunteer-page-with .user {
+        position: relative;
+        width: 20px;
+        height: 20px;
+      }
+
+      .volunteer-page-with .text-wrapper-2 {
+        position: relative;
+        width: fit-content;
+        font-family: "Inter", Helvetica;
+        font-weight: 400;
+        color: #fbf10b;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+
+      .volunteer-page-with .vector-default {
+        position: absolute;
+        width: 29px;
+        height: 23px;
+        top: 28px;
+        left: 1799px;
+      }
+
+      .volunteer-page-with .overlap-group {
+        position: absolute;
+        width: 182px;
+        height: 50px;
+        top: 15px;
+        left: 850px;
+      }
+
+      .volunteer-page-with .volunteer-wrapper {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+        position: absolute;
+        top: 5px;
+        left: 60px;
+      }
+
+      .volunteer-page-with .volunteer {
+        position: relative;
+        width: fit-content;
+        margin-top: -1px;
+        font-family: "Inter", Helvetica;
+        font-weight: 400;
+        color: #fbf10b;
+        font-size: 20px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+      }
+
+      .volunteer-page-with .div-wrapper {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+        position: absolute;
+        top: -5px;
+        left: -10px;
+      }
+
+      .volunteer-page-with .text-wrapper-3 {
+        position: relative;
+        width: 43px;
+        height: 30px;
+        margin-top: -2px;
+        margin-left: -1px;
+        -webkit-text-stroke: 1px #2a8a09;
+        font-family: "Katibeh";
+        font-weight: 400;
+        color: #fbf10b;
+        font-size: 40px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+      }
+
+      .volunteer-page-with .img {
+        position: absolute;
+        width: 42px;
+        height: 39px;
+        top: 887px;
+        left: 30px;
+      }
+
+      .volunteer-page-with .vector-2 {
+        position: absolute;
+        width: 41px;
+        height: 39px;
+        top: 953px;
+        left: 31px;
+      }
+
+      .volunteer-page-with .frame-3 {
+        position: absolute;
+        width: 1344px;
+        height: 657px;
+        top: 214px;
+        left: 279px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid;
+        border-color: #000000;
+      }
+
+      .volunteer-page-with .text-wrapper-4 {
+        position: absolute;
+        width: 290px;
+        height: 39px;
+        top: 40px;
+        left: 527px;
+        font-family: "Inter", Helvetica;
+        font-weight: 400;
+        color: #000000;
+        font-size: 32px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+
+      .volunteer-page-with .line {
+        position: absolute;
+        width: 761px;
+        height: 1px;
+        top: 88px;
+        left: 271px;
+        object-fit: cover;
+      }
+
+      .volunteer-page-with #returnButton {
+        all: unset;
+        box-sizing: border-box;
+        display: flex;
+        width: 176px;
+        height: 34px;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 10px 32px;
+        position: absolute;
+        top: 34px;
+        left: 40px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        border: 1px solid;
+        border-color: #000000;
+        font-family: "Inter", Helvetica;
+        font-size: 20px;    
+      }
+
+      .volunteer-page-with #returnButton:hover {
+            background-color: grey;
+
+      }
+        
+      .volunteer-page-with .arrow-left {
+        position: relative;
+        width: 32px;
+        height: 32px;
+        margin-top: -9px;
+        margin-bottom: -9px;
+        margin-left: -3px;
+      }
+
+      .volunteer-page-with .text-wrapper-5 {
+        position: relative;
+        width: fit-content;
+        margin-top: -9px;
+        margin-bottom: -7px;
+        margin-right: -3px;
+        font-family: "Inter", Helvetica;
+        font-weight: 400;
+        color: #000000;
+        font-size: 25px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+      }
+
+      .volunteer-page-with .overlap-2 {
+        position: absolute;
+        width: 401px;
+        height: 190px;
+        top: 114px;
+        left: 541px;
+      }
+
+      .volunteer-page-with .text-wrapper-6 {
+        position: absolute;
+        width: 202px;
+        top: 44px;
+        left: 81px;
+        font-family: "Inter", Helvetica;
+        font-weight: 400;
+        color: #000000;
+        font-size: 20px;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+
+      .volunteer-page-with .text-wrapper-7 {
+        position: absolute;
+        width: 288px;
+        top: 93px;
+        left: 89px;
+        font-family: "Inter", Helvetica;
+        font-weight: 400;
+        color: #000000;
+        font-size: 20px;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+
+      .volunteer-page-with .text-wrapper-8 {
+        position: absolute;
+        width: 401px;
+        top: 0;
+        left: 0;
+        font-family: "Inter", Helvetica;
+        font-weight: 400;
+        color: #000000;
+        font-size: 20px;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+
+      .volunteer-page-with .text-wrapper-9 {
+        position: absolute;
+        width: 158px;
+        top: 142px;
+        left: 52px;
+        font-family: "Inter", Helvetica;
+        font-weight: 400;
+        color: #000000;
+        font-size: 20px;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+
+      .volunteer-page-with .overlap-3 {
+        position: absolute;
+        width: 380px;
+        height: 105px;
+        top: 304px;
+        left: 457px;
+      }
+
+      .volunteer-page-with .text-wrapper-10 {
+        position: absolute;
+        width: 278px;
+        top: 52px;
+        left: 102px;
+        font-family: "Inter", Helvetica;
+        font-weight: 400;
+        color: #000000;
+        font-size: 20px;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+
+      .volunteer-page-with .text-wrapper-11 {
+        position: absolute;
+        width: 273px;
+        top: 0;
+        left: 0;
+        font-family: "Inter", Helvetica;
+        font-weight: 400;
+        color: #000000;
+        font-size: 20px;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+
+      .volunteer-page-with .vector-3 {
+        position: absolute;
+        width: 21px;
+        height: 36px;
+        top: 36px;
+        left: 1277px;
+      }
+
+      .volunteer-page-with #contactOrganizer {
+        display: flex;
+        width: 255px;
+        height: 35px;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        padding: 10px 45px;
+        position: absolute;
+        top: 545px;
+        left: 687px;
+        border-radius: 8px;
+        border: 1px solid;
+        border-color: #000000;
+        color: #000000;
+        font-family: "Inter", Helvetica;
+        font-size: 20px;
+        background-color: white;
+      }
+
+      .volunteer-page-with #contactOrganizer:hover {
+            background-color: grey;
+      }
+        
+      .volunteer-page-with .text-wrapper-12 {
+        position: relative;
+        width: fit-content;
+        margin-top: -5.5px;
+        margin-bottom: -3.5px;
+        margin-left: -4px;
+        margin-right: -4px;
+        font-family: "Inter", Helvetica;
+        font-weight: 400;
+        color: #000000;
+        font-size: 20px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+      }
+
+      .volunteer-page-with #joinEventButton {
+        display: flex;
+        width: 234px;
+        height: 35px;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 12px 45px;
+        position: absolute;
+        top: 545px;
+        left: 400px;
+        border-radius: 8px;
+        border: 1px solid;
+        border-color: #000000;
+        font-size: 20px;
+        font-family: "Inter", Helvetica;
+        background-color: white;
+      }
+
+      .volunteer-page-with #joinEventButton:hover {
+            background-color: grey;
+      }
+        
+      .volunteer-page-with .text-wrapper-13 {
+        position: relative;
+        width: fit-content;
+        margin-top: -7.5px;
+        margin-bottom: -5.5px;
+        font-family: "Inter", Helvetica;
+        font-weight: 400;
+        color: #000000;
+        font-size: 20px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+      }
+    </style>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="volunteer-page-with">
+      <div class="overlap-wrapper">
+        <div class="overlap">
+          <div class="frame">
+            <button id="signOutButton">Sign Out
+              <img
+                class="vector"
+                src="https://cdn.animaapp.com/projects/6620354164a667b0f90585ee/releases/66319e718e5c84998c2010eb/img/vector.svg"
+              />
+            </button>
+            <div class="frame-2">
+              <img
+                class="user"
+                src="https://cdn.animaapp.com/projects/6620354164a667b0f90585ee/releases/66319e718e5c84998c2010eb/img/user.svg"
+              />
+              <div class="text-wrapper-2">FL</div>
+            </div>
+            <img
+              class="vector-default"
+              src="https://cdn.animaapp.com/projects/6620354164a667b0f90585ee/releases/66319e718e5c84998c2010eb/img/vector-default.svg"
+            />
+            <div class="overlap-group">
+              <div class="volunteer-wrapper"><div class="volunteer">|&nbsp;&nbsp;Volunteer</div></div>
+              <div class="div-wrapper"><div class="text-wrapper-3">HH</div></div>
+            </div>
+          </div>
+          <img
+            class="img"
+            src="https://cdn.animaapp.com/projects/6620354164a667b0f90585ee/releases/662fe40a3963d74fbfb477ab/img/vector-3.svg"
+          />
+          <img
+            class="vector-2"
+            src="https://cdn.animaapp.com/projects/6620354164a667b0f90585ee/releases/662fe40a3963d74fbfb477ab/img/vector-2.svg"
+          />
+          <div class="frame-3">
+            <div class="text-wrapper-4">[Event Title Here]</div>
+            <img
+              class="line"
+              src="https://cdn.animaapp.com/projects/6620354164a667b0f90585ee/releases/6634d2c2152f1567d84b91eb/img/line-14.svg"
+            />
+            <button id="returnButton">Return
+              <img
+                class="arrow-left"
+                src="https://cdn.animaapp.com/projects/6620354164a667b0f90585ee/releases/6634d2c2152f1567d84b91eb/img/arrowleft.svg"
+              />
+            </button>
+            <div class="overlap-2">
+              <div class="text-wrapper-6">Time:</div>
+              <div class="text-wrapper-7">Date:</div>
+              <div class="text-wrapper-8">Organized by:</div>
+              <div class="text-wrapper-9">Location:</div>
+            </div>
+            <div class="overlap-3">
+              <div class="text-wrapper-10">Description:</div>
+              <div class="text-wrapper-11">Number of participants:</div>
+            </div>
+            <img
+              class="vector-3"
+              src="https://cdn.animaapp.com/projects/6620354164a667b0f90585ee/releases/6634d2c2152f1567d84b91eb/img/vector-7.svg"
+            />
+            <button id="joinEventButton">Join</button>
+            <button id="contactOrganizer">Contact Organizer</button>
+        </div>
+      </div>
+    </div>
+    <script src="event_info.js"></script>
+  </body>
+</html>
