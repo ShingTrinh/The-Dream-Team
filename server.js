@@ -7,6 +7,8 @@ const {logger} = require('./middleware/logEvents');
 const errorHandler = require('./middleware/errorHandler');
 const mongoose = require('mongoose');
 const connectDB = require('./config/dbConn')
+const verifyJWT = require('./middleware/verifyJWT')
+const cookieParser = require('cookie-parser');
 const PORT = 3000;
 
 //conect to mongodb
@@ -17,6 +19,7 @@ const app = express();
 //custom middleware logger
 app.use(logger);
 
+/*
 //cross origin resource sharing 
 const whitelist = ['http://127.0.0.1:3000'];
 const corsOptions = {
@@ -30,11 +33,11 @@ const corsOptions = {
   optionsSuccessStatus: 200
 }
 app.use(cors(corsOptions));
-
-
+*/
+//middleware to handle different types of data
 app.use(express.urlencoded( {extended: false}));
 app.use(express.json());
-
+app.use(cookieParser());
 
 //serve static files
 app.use(express.static(path.join(__dirname)));
@@ -43,8 +46,15 @@ app.use(express.static(path.join(__dirname, '/scripts')));
 
 //routes
 app.use('/',require('./routes/root'));
-app.use('/register',require('./routes/register'));
-app.use('/auth',require('./routes/auth'));
+app.use('/register',require('./routes/register')); //registers users
+app.use('/auth',require('./routes/auth')); 
+app.use('/refresh',require('./routes/refresh')); 
+app.use('/logout',require('./routes/logout')); 
+
+
+app.use(verifyJWT); //everything under this line is needs to be verified by JWT
+app.use('/employees',require('./routes/api/employees')); //admins
+
 
 app.all('*', (req,res) => {
   res.status(404);
@@ -63,7 +73,5 @@ app.use(errorHandler);
 
 mongoose.connection.once('open', () => {
     console.log('Connected to MongoDB');
-
     app.listen(PORT, () => console.log(`Server running on Port ${PORT}`));
-
 });

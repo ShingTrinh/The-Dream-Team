@@ -3,16 +3,20 @@ const Submit = document.getElementById("SubmitButton");
 Submit.addEventListener("click", SignUpClicked);
 
 const Back = document.getElementById("backbtn");
-Back.addEventListener("click",backClicked)
+Back.addEventListener("click", backClicked);
 
-function backClicked(){
+function backClicked() {
     console.log("BACK!");
-    window.location.href = "../WelcomePage/index.html"
+    window.location.href = "../WelcomePage/index.html";
+    console.log('JSON stringified userData:', JSON.stringify(userData));
+
 }
 
+function registerUser(userData) {
+    console.log('JSON stringified userData:', JSON.stringify(userData));
 
-function registerUser(userData){
-    fetch('/signup', {
+    
+    fetch('/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -21,10 +25,14 @@ function registerUser(userData){
     })
     .then(response => {
         if (response.ok) {
-            // Redirect user to the next page upon successful signup
-            console.log("SUCCESS!");
+            // Registration successful
+            console.log("Registration successful!");
+            // Redirect user to login page or dashboard
+            window.location.href = "/login.html";
         } else {
-            throw new Error('Network response was not ok');
+            // Registration failed
+            console.error('Error during signup:', response.statusText);
+            alert('Registration failed. Please try again.');
         }
     })
     .catch(error => {
@@ -33,32 +41,26 @@ function registerUser(userData){
     });
 }
 
-
 // Function for reading user input after button is clicked.
 function SignUpClicked() {  
-    console.log("IN SIGNUPCLICK");
     var userData = {
-        firstName:document.getElementById("adjustTextbox").value,
-        lastName:document.getElementById("adjustTextbox2").value,
-        email:document.getElementById("adjustTextbox3").value,
-        studentID:document.getElementById("adjustTextbox4").value,
-        password:document.getElementById("adjustTextbox5").value
+        //these need to be the same variable names as the one in the register controller
+        fname: document.getElementById("adjustTextbox").value,
+        lname: document.getElementById("adjustTextbox2").value,
+        email: document.getElementById("adjustTextbox3").value,
+        stuid: document.getElementById("adjustTextbox4").value,
+        pwd: document.getElementById("adjustTextbox5").value
     };
-    if (isEmpty(userData)) {
-        alert("Please fill in all fields.");
-    } else {
         registerUser(userData);
-    }
 }
 
 // Check for empty string input.
 function isEmpty(userData) {
-    return ((userData.firstName === "") || (userData.lastName === "") || (userData.email === "") || (userData.studentID === "") || (userData.password === ""));
+    return (
+        userData.firstName === "" ||
+        userData.lastName === "" ||
+        userData.email === "" ||
+        userData.studentID === "" ||
+        userData.password === ""
+    );
 }
-
-
-
-
-
-
-

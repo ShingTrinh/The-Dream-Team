@@ -1,33 +1,34 @@
-const usersDB = {
-    users: require('../models/users.json'),
-    setUsers: function (data) { this.users = data }
-}
-const fsPromises = require('fs').promises;
-const path = require('path');
+const User = require('../models/User');
 const bcrypt = require('bcrypt');
 
 const handleNewUser = async (req, res) => {
-    const { user, pwd } = req.body;
-    if (!user || !pwd) return res.status(400).json({ 'message': 'Username and password are required.' });
+
+    console.log('Request body:', req.body);
+    
+    const { stuid, pwd, fname,lname,email } = req.body;
+    if (!stuid || !pwd || !fname || !lname || !email) return res.status(400).json({ 'message': 'Please Fill Out All Boxes.' });
 
     // check for duplicate usernames in the db
-    const duplicate = usersDB.users.find(person => person.username === user);
-    if (duplicate) return res.sendStatus(409); //Conflict 
+    const duplicate = await User.findOne({ studentid:stuid }).exec();
 
+    if (duplicate) return res.sendStatus(409).json(); //Conflict 
 
     try {
         //encrypt the password
         const hashedPwd = await bcrypt.hash(pwd, 10);
-        //store the new user
-        const newUser = { "username": user, "password": hashedPwd };
-        usersDB.setUsers([...usersDB.users, newUser]);
         
-        await fsPromises.writeFile(
-            path.join(__dirname, '..', 'models', 'users.json'),
-            JSON.stringify(usersDB.users)
-        );
-        console.log(usersDB.users);
-        res.status(201).json({ 'success': `New user ${user} created!` });
+        //create and store the new user
+        const result = await User.create({ 
+            "studentid": stuid, 
+            "firstname": fname,
+            "lastname": lname,
+            "email": email,
+            "password": hashedPwd,
+        });
+
+        console.log(result);
+        
+        res.status(201).json({ 'success': `New user ${stuid} created!` });
     } catch (err) {
         res.status(500).json({ 'message': err.message });
     }
