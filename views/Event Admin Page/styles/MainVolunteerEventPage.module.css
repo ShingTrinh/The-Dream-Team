@@ -1,0 +1,476 @@
+@import "https://fonts.googleapis.com/css?family=Roboto:0,400;0,500&display=swap";
+@import "https://fonts.googleapis.com/css?family=Inter:0,400&display=swap";
+@import "https://fonts.googleapis.com/css?family=Katibeh:0,400&display=swap";
+@import "https://fonts.googleapis.com/css?family=Roboto:0,400;0,500&display=swap";
+@import "https://fonts.googleapis.com/css?family=Inter:0,400&display=swap";
+@import "https://fonts.googleapis.com/css?family=Roboto:0,400;0,500&display=swap";
+.MainVolunteerEventPage_1_123 {
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.Faeb9sMxiaey7Kk_3_1_124 {
+  opacity: 0.1;
+  background: #d3d3d3 url(<path-to-image>) 50% / cover no-repeat;
+  flex-shrink: 0;
+  width: 1920px;
+  height: 1092px;
+}
+.InfoButton_1_144 {
+  flex-shrink: 0;
+  width: 41px;
+  height: 39px;
+}
+.QuestionButton_1_142 {
+  flex-shrink: 0;
+  width: 42px;
+  height: 39px;
+}
+.CreateEventButton_9_427 {
+  width: 202px; 
+  height: 163px; 
+  left: 687px; 
+  top: 399px; 
+  position: absolute;
+  flex-shrink: 0;
+  width: 202px;
+  height: 163px;
+}
+.Ellipse_1_9_428 {
+  width: 100px; 
+  height: 100px; 
+  left: 51px; top: 0px; 
+  position: absolute; 
+  background: #D9D9D9; 
+  border-radius: 9999px;
+  fill: #d9d9d9;
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+}
+.generated__9_429 {
+  left: 82px; 
+  top: 14px; 
+  position: absolute;
+  color: #000;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: inline-block;
+}
+.CreateEvent_9_430 {
+  left: 0px; 
+  top: 121px; 
+  position: absolute; 
+  font-size: 36px; 
+  color: #000;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: inline-block;
+}
+.Card_2_480 {
+  width: 384.67px; 
+  height: 376.46px; 
+  left: 145px; 
+  top: 256px; 
+  position: absolute; 
+  background: white; 
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.20); 
+  border-radius: 8px; overflow: hidden; 
+  flex-direction: column; 
+  justify-content: flex-start; align-items: flex-start; 
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: flex-start;
+  display: flex;
+  overflow: hidden;
+  box-shadow:
+    0 0.1px 0.3px #0000001a,
+    0 1px 2px #0003;
+}
+.Media_2_481 {
+  background: #2b8a09;
+  flex-shrink: 0;
+  height: 194px;
+}
+.CardHeader_2_482 {
+  flex-shrink: 0;
+  align-items: center;
+  height: 80px;
+  padding: 16px 88.671px 16px 16px;
+  display: flex;
+}
+.Content_126_2293 {
+  align-items: flex-start;
+  gap: 16px;
+  height: 48px;
+  display: flex;
+  overflow: hidden;
+}
+.VisualMedia_148_7908 {
+  background: #2b8a09;
+  border-radius: 24px;
+  width: 40px;
+  height: 40px;
+}
+.Text_126_1760 {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 224px;
+  height: 48px;
+  display: flex;
+  overflow: hidden;
+}
+.CardTitle_126_1761 {
+  color: var(--black-87, #000000de);
+  font-feature-settings:
+    "clig" off,
+    "liga" off;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  display: inline-block;
+}
+.SecondaryText_126_1762 {
+  color: var(--black-60, #0009);
+  font-feature-settings:
+    "clig" off,
+    "liga" off;
+  letter-spacing: undefined;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  display: inline-block;
+}
+.ContentArea_2_483 {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+  height: 40px;
+  padding: 0 16px;
+  display: flex;
+  overflow: hidden;
+}
+.HelloTheCareerCenterIsInNeedHelpSettingUpForTheJobFairAndAnyHelpIsAppreciated_2_484 {
+  color: var(--black-60, #0009);
+  font-feature-settings:
+    "clig" off,
+    "liga" off;
+  letter-spacing: undefined;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  display: inline-block;
+}
+.CardActionArea_3_39 {
+  flex-shrink: 0;
+  width: 100%;
+  height: 52px;
+}
+.Button_3_40 {
+  border-radius: 4px;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  height: 36px;
+  padding: 6px 8px;
+  display: inline-flex;
+}
+.TextLabel_1_153 {
+  color: var(--primary-100, #6200e8);
+  text-align: center;
+  font-feature-settings:
+    "clig" off,
+    "liga" off;
+  letter-spacing: 0.14px;
+  text-transform: uppercase;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  display: inline-block;
+}
+.Button_3_41,
+.Button_3_42 {
+  border-radius: 4px;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  height: 36px;
+  padding: 6px 8px;
+  display: inline-flex;
+}
+.Divider_1_138 {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px; 
+  left: 0px; 
+  top: 190px; 
+  position: absolute; 
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  gap: 10px; 
+  display: inline-flex;
+  gap: 10px;
+  padding: 10px;
+  display: inline-flex;
+}
+.Line_4_1_139 {
+  opacity: 0.9;
+  backdrop-filter: blur(2px);
+  box-sizing: border-box;
+  background: #000;
+  width: 945px;
+  height: 2px;
+}
+.UpcomingEvents_1_140 {
+  width: 397px; 
+  height: 58px; 
+  left: 100px; 
+  top: 500px;
+  position: absolute; 
+  justify-content: center; 
+  align-items: center; 
+  display: inline-flex;
+  top: 100px;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+
+  display: flex;
+}
+.UpcomingEvents_1_141 {
+  color: #000;
+  text-shadow: 0 4px 4px #00000040;
+  font-family: Inter;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: inline-block;
+}
+.Header_1_126 {
+  background: #2b8a09;
+  border-radius: 0 0 10px 10px;
+  position: absolute;
+  top: 0;
+  flex-shrink: 0;
+  width: 100%;
+  height: 88px;
+}
+.SignOut_9_444 {
+  box-sizing: border-box;
+  background: #2b8a09;
+  border: 1px solid #fbf20c;
+  border-radius: 8px;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 157px;
+  height: 39px;
+  padding: 12px 32px;
+  display: flex;
+}
+.Vector_9_445 {
+  fill: #fbf20c;
+  flex-shrink: 0;
+  width: 21px;
+  height: 18px;
+}
+.SignOut_9_446 {
+  color: #fbf20c;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: inline-block;
+}
+.FilterEvents_9_439 {
+  box-sizing: border-box;
+  background: #2b8a09;
+  border: 1px solid #2b8a09;
+  border-radius: 8px;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 209px;
+  height: 37px;
+  padding: 12px 32px;
+  display: flex;
+}
+.Funnel_9_440 {
+  position: absolute;
+  width: 29px; 
+  height: 28px;
+  left: 1436px;
+  top: 25px;
+  padding-top: 4.37px; 
+  padding-bottom: 2.62px; 
+  padding-left: 2.72px; 
+  padding-right: 2.72px; 
+  justify-content: center; 
+  align-items: center; 
+  display: flex;
+  flex-shrink: 0;
+  width: 29px;
+  height: 28px;
+  overflow: hidden;
+}
+.FilterEvents_9_442 {
+  width: 209px; 
+  height: 25px; 
+  padding-left: 32px; 
+  padding-right: 32px; 
+  padding-top: 12px; 
+  padding-bottom: 12px; 
+  left: 1436px; 
+  top: 21px; 
+  position: absolute; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 8px; 
+  display: inline-flex;
+  color: #fbf20c;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: inline-block;
+}
+.Vector_9_443 {
+  position: absolute;
+  width: 29px; 
+  height: 28px;
+  left: 1550px;
+  top: 37px;
+  padding-top: 4.37px; 
+  padding-bottom: 2.62px; 
+  padding-left: 2.72px; 
+  padding-right: 2.72px; 
+  justify-content: center; 
+  align-items: center; 
+  display: flex;
+  fill: #fbf20c;
+  flex-shrink: 0;
+  width: 14.438px;
+  height: 8.626px;
+}
+.UserProfile_9_435 {
+  padding-left: 10px; 
+  padding-right: 10px; 
+  padding-top: 18px; 
+  padding-bottom: 12px; 
+  left: 1673px; 
+  top: 18px; 
+  position: absolute; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 8px; 
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 10px;
+  display: inline-flex;
+}
+.User_9_436 {
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+}
+.Fl_9_438 {
+  color: #fbf20c;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: inline-block;
+}
+.DropDownMenu_9_433 {
+  width: 29px;
+  height: 23px; 
+  left: 1815px; 
+  top: 28px; 
+  position: absolute; 
+  justify-content: center; 
+  align-items: center; 
+  display: inline-flex;
+  flex-shrink: 0;
+  width: 29px;
+  height: 23px;
+}
+.UserType_9_431 {
+  padding: 10px; 
+  left: 910px; top: 25px; 
+  position: absolute; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 10px; 
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  display: inline-flex;
+}
+.Volunteer_9_432 {
+  color: #fbf20c;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: inline-block;
+}
+.Logo_7_156 {
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 63px;
+  height: 50px;
+  padding: 10px;
+  display: flex;
+}
+.Hh_7_157 {
+  color: #fbf20c;
+  -webkit-text-stroke-width: 1;
+  -webkit-text-stroke-color: #2b8a09;
+  width: 100%;
+  padding: 10px; 
+  left: 860px; 
+  top: 5px; 
+  position: absolute; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 10px; 
+  display: inline-flex;
+  font-family: Katibeh;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: inline-block;
+}
