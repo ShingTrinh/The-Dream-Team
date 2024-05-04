@@ -3,6 +3,16 @@ import styles from '../styles/MainVolunteerEventPage.module.css';
 
 
 export default function MainVolunteerEventPage() {
+
+  // Create Event Button
+  const handleCreateEventButtonClick = () => {
+    window.location.href = "createEvent2.html";
+  };
+
+  const handleSignOutButtonClick = () => {
+    window.location.href = "hh_login_page.html";
+  };
+  
   return (
     <div className={styles.MainVolunteerEventPage_1_123}>
       <div className={styles.Faeb9sMxiaey7Kk_3_1_124}></div>
@@ -15,7 +25,9 @@ export default function MainVolunteerEventPage() {
         </svg>
       </div>
       <div className={styles.CreateEventButton_9_427}>
-        <div className={styles.Ellipse_1_9_428}></div><span className={styles.generated__9_429}>+</span><span className={styles.CreateEvent_9_430}>Create Event</span>
+      <button className={styles.CreateEventButton_9_427} onClick={handleCreateEventButtonClick}>
+          <div className={styles.Ellipse_1_9_428}></div><span className={styles.generated__9_429}>+</span><span className={styles.CreateEvent_9_430}>Create Event</span>
+        </button>
       </div>
       <div className={styles.Card_2_480}>
         <div className={styles.Media_2_481}></div>
@@ -37,11 +49,13 @@ export default function MainVolunteerEventPage() {
       </div>
       <div className={styles.UpcomingEvents_1_140}><span className={styles.UpcomingEvents_1_141}>Upcoming Events</span></div>
       <div className={styles.Header_1_126}>
-        <div className={styles.SignOut_9_444}>
+           <button className={styles.SignOut_9_444} onClick={handleSignOutButtonClick}>
+           
           <div className={styles.Vector_9_445}><svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M21.5 17.6818C21.5 17.8988 21.4078 18.1069 21.2437 18.2604C21.0796 18.4138 20.8571 18.5 20.625 18.5H1.375C1.14294 18.5 0.920376 18.4138 0.756282 18.2604C0.592187 18.1069 0.5 17.8988 0.5 17.6818C0.5 17.4648 0.592187 17.2567 0.756282 17.1033C0.920376 16.9498 1.14294 16.8636 1.375 16.8636H20.625C20.8571 16.8636 21.0796 16.9498 21.2437 17.1033C21.4078 17.2567 21.5 17.4648 21.5 17.6818ZM4 11.9545C4.23206 11.9545 4.45462 11.8683 4.61872 11.7149C4.78281 11.5615 4.875 11.3534 4.875 11.1364V3.29307L15.6309 13.3516C15.7122 13.4276 15.8087 13.4879 15.915 13.529C16.0212 13.5702 16.135 13.5914 16.25 13.5914C16.365 13.5914 16.4788 13.5702 16.585 13.529C16.6913 13.4879 16.7878 13.4276 16.8691 13.3516C16.9504 13.2756 17.0148 13.1853 17.0588 13.086C17.1028 12.9867 17.1255 12.8802 17.1255 12.7727C17.1255 12.6652 17.1028 12.5588 17.0588 12.4594C17.0148 12.3601 16.9504 12.2699 16.8691 12.1939L6.11203 2.13636H14.5C14.7321 2.13636 14.9546 2.05016 15.1187 1.89672C15.2828 1.74328 15.375 1.53518 15.375 1.31818C15.375 1.10119 15.2828 0.893079 15.1187 0.73964C14.9546 0.586201 14.7321 0.5 14.5 0.5H4C3.76794 0.5 3.54538 0.586201 3.38128 0.73964C3.21719 0.893079 3.125 1.10119 3.125 1.31818V11.1364C3.125 11.3534 3.21719 11.5615 3.38128 11.7149C3.54538 11.8683 3.76794 11.9545 4 11.9545Z" fill="#FBF20C" />
             </svg>
           </div><span className={styles.SignOut_9_446}>Sign Out</span>
+             </button>
         </div>
         <div className={styles.FilterEvents_9_439}>
           <div className={styles.Funnel_9_440}><svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -66,6 +80,5 @@ export default function MainVolunteerEventPage() {
         <div className={styles.UserType_9_431}><span className={styles.Volunteer_9_432}>| Admin</span></div>
         <div className={styles.Logo_7_156}><span className={styles.Hh_7_157}>HH </span></div>
       </div>
-    </div>
   );
 }
