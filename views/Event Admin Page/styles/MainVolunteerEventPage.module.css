@@ -30,8 +30,8 @@
 .CreateEventButton_9_427 {
   width: 202px; 
   height: 163px; 
-  left: 687px; 
-  top: 399px; 
+  left: 300px; 
+  top: 200px; 
   position: absolute;
   flex-shrink: 0;
   width: 202px;
@@ -292,6 +292,9 @@
   display: flex;
 }
 .Vector_9_445 {
+  position: absolute;
+  top: 10px;
+  left: 35px;
   fill: #fbf20c;
   flex-shrink: 0;
   width: 21px;
@@ -299,6 +302,9 @@
 }
 .SignOut_9_446 {
   color: #fbf20c;
+  position: absolute;
+  top: 10px;
+  left: 60px;
   font-family: Inter;
   font-size: 14px;
   font-style: normal;
