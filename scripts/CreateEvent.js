@@ -1,6 +1,13 @@
 const Submit = document.getElementById("submitBtn");
 Submit.addEventListener("click", SubmitClicked);
 
+const exit = document.getElementById("xbtn");
+exit.addEventListener("click", exitClicked);
+
+function exitClicked(){
+    window.location.href = "../WelcomePage/index.html";
+}
+
 function SubmitClicked(){
     console.log("SUBMITTED!");
     //window.location.href = "../views/adminEvent.html";

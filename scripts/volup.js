@@ -1,27 +1,50 @@
-function fetchEvents() {
-  fetch('/getEvents')
-      .then(function(response) {
-          return response.json();
-      })
-      .then(function(events) {
-          displayEvents(events);
-      })
-      .catch(function(error) {
-          console.error('Error fetching events:', error);
-      });
+fetch('/employees')
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        }
+        throw new Error('Failed to fetch employees.');
+    })
+    .then(data => {
+        console.log(data);
+        displayEvents(data);
+        // Do something with the data, such as displaying it on the page
+    })
+    .catch(error => {
+        console.error('Error fetching employees:', error);
+        // Handle errors, such as displaying an error message to the user
+    });
+
+    function displayEvents(events) {
+        var eventContainer = document.getElementById('eventContainer');
+      
+        eventContainer.innerHTML = ''; 
+      
+        if (events.length === 0) {
+            eventContainer.innerHTML = '<p>No events found</p>';
+        } else {
+            events.forEach(function(event) {
+                var eventBlock = createEventBlock(event);
+                eventContainer.appendChild(eventBlock);
+            });
+        }
+      }
+      
+function createEventBlock(event) {
+    const eventBlock = document.createElement('div');
+    eventBlock.classList.add('event');
+      
+    eventBlock.innerHTML = `
+    <h3>${event.title}</h3>
+    <p>${event.description}</p>
+    <p>Date: ${event.date.substring(0,10)}</p>
+    <p>Time: ${event.time}</p>
+    <p>Categories: ${event.categories}</p>
+    <button>Join</button>
+  `
+          
+    return eventBlock;
 }
 
-function displayEvents(events) {
-  var eventContainer = document.getElementById('eventContainer');
 
-  eventContainer.innerHTML = ''; 
-
-  if (events.length === 0) {
-      eventContainer.innerHTML = '<p>No events found</p>';
-  } else {
-      events.forEach(function(event) {
-          var eventBlock = createEventBlock(event);
-          eventContainer.appendChild(eventBlock);
-      });
-  }
-}
+      

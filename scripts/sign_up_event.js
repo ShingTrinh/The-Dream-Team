@@ -7,8 +7,7 @@ Back.addEventListener("click", backClicked);
 
 function backClicked() {
     console.log("BACK!");
-    window.location.href = "../WelcomePage/index.html";
-    console.log('JSON stringified userData:', JSON.stringify(userData));
+    window.location.href = previousPage;
 
 }
 

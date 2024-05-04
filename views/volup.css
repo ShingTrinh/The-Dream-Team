@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    border:yellow;
+  }
+  .banner {
+    background: radial-gradient(circle, #298a09, #023a0b);
+    color: gold;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(10, 48, 2);
+  }
+  .button {
+    background: radial-gradient(circle, #ffeb11c5, #888100);
+    border: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  .button:hover {
+    background-color: #45a049;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .text-logo {
+    font-family:katibeh;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 0 0 15px black;
+  }
+  
+  .text-admin {
+    font-size: 20px;
+  }
+  
+  .text-upcoming{
+    font-size: 48px; 
+    font-family: Inter; 
+    font-weight: 400; 
+    word-wrap: break-word;
+  
+    width: 397px; 
+    height: 58px; 
+    left: 133px; 
+    top: 132px; 
+    position: absolute; 
+    justify-content: center; 
+    align-items: center; 
+    display: inline-flex;
+  }
+  
+  .underline {
+    width: 55%;
+    border-bottom: 4px solid black; /* Add a solid black underline */
+    margin-left: 100px; 
+    margin-top: 115px; /* Adjust the distance between text and underline */
+  }
+  
+  
+  .event {
+    display: inline-block;
+    width: calc(25% - 20px);
+    padding: 20px;
+    margin: 100px;
+    border: 5px solid #000000;
+    border-radius: 5px;
+    overflow: hidden; 
+    padding: 10px 20px;
+    height: 10px;
+
+  }
+  
+  .event p {
+    margin: 2;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
+  }
+  
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+  }
+  
+  .modal.active {
+    display: block;
+  }
+  
+  .modal-body {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .modal-header .title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  textarea {
+    width: calc(100% - 20px); 
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  /* TILE CARD CSS TEMPLATE*/
+  
