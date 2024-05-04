@@ -26,7 +26,7 @@ function SubmitClicked(){
 function createEvent(eventData){
     console.log('JSON stringified userData:', JSON.stringify(eventData));
 
-    fetch('/employees', {
+    fetch('/events', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

@@ -53,7 +53,7 @@ app.use('/logout',require('./routes/logout'));
 
 
 //app.use(verifyJWT); //everything under this line is needs to be verified by JWT
-app.use('/employees',require('./routes/api/employees')); //admins
+app.use('/events',require('./routes/api/events')); //admins
 
 
 app.all('*', (req,res) => {

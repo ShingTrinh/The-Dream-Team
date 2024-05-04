@@ -1,9 +1,9 @@
-fetch('/employees')
+fetch('/events')
     .then(response => {
         if (response.ok) {
             return response.json();
         }
-        throw new Error('Failed to fetch employees.');
+        throw new Error('Failed to fetch events.');
     })
     .then(data => {
         console.log(data);
@@ -11,7 +11,7 @@ fetch('/employees')
         // Do something with the data, such as displaying it on the page
     })
     .catch(error => {
-        console.error('Error fetching employees:', error);
+        console.error('Error fetching events:', error);
         // Handle errors, such as displaying an error message to the user
     });
 
