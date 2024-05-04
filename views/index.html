@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,4 +12,225 @@
 
     <script src="../scripts/main.js"></script>
 </body>
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body, html {
+        height: 100%;
+      }
+      
+      #welcome {
+        position: absolute;
+        font-family: "Khand", Helvetica;
+        color: #2a8a09;
+        font-size: 20px;
+        top: 70px;
+        left: 375px;
+      }
+
+      #regBtn {
+        box-sizing: border-box;
+        display: flex;
+        width: 150px;
+        height: 40px;
+        padding: 12px 20px;
+        top: 60px;
+        left: 1400px;
+        border: 0px solid;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        position: absolute;
+        background-color: #2a8a09;
+        border-radius: 8px;
+        color: white;
+        font-family: "Inter", Helvetica;
+        font-size: 20px;
+      }
+
+      #regBtn:hover {
+        background-color: #fbc20c;
+        color: black;
+      }
+
+      #logBtn {
+        box-sizing: border-box;
+        display: flex;
+        width: 150px;
+        height: 40px;
+        padding: 12px 20px;
+        top: 60px;
+        left: 1600px;
+        border: 0px solid;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        position: absolute;
+        background-color: #2a8a09;
+        color: white;
+        border-radius: 8px;
+        border-color: white;
+        font-family: "Inter", Helvetica;
+        font-size: 20px;
+      }
+
+      #logBtn:hover {
+        background-color: #fbc20c;
+        color: black;
+      }
+     
+      .upperFrame {
+       background-color: white;
+       border: 3px solid;
+       border-color: #2a8a09;
+       border-radius: 0px 0px 10px 10px;
+       display: flex;
+       height: 160px;
+       left: 8px;
+       right: 10px;
+       width: 1549px;
+       opacity: 0.95;
+       padding: 0 173px;
+       position: absolute;
+       top: 3px;
+      }
+     
+     .lowerFrame {
+      background-color: #2a8a09;
+      border-color: white;
+      border: 1px solid white;
+      border-radius: 10px 10px 0px 0px;
+      display: flex;
+      gap: 121px;
+      height: 160px;
+      opacity: 0.9;
+      overflow: hidden;
+      padding: 0 63px;
+      position: absolute;
+      top: 763px;
+      left: 8px;
+      width: 1772px;
+      opacity: 0.95;
+      position: absolute;
+     }
+    
+     #background {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 1900px;
+        height: 100%;
+        top: 0px;
+     }
+    
+     #h-1 {
+      position: absolute;
+      color: #2a8a09;
+      font-family: "Katibeh";
+      font-size: 150px;
+      font-weight: 400;
+      letter-spacing: 0;
+      line-height: normal;
+      margin-bottom: -109px;
+      min-height: 240px;
+      min-width: 107px;
+      white-space: nowrap;
+      top: 0px;
+      left: 60px;
+     }
+
+     #logo1 {
+      position: absolute;
+      color: #2a8a09;
+      font-family: "Khand", Helvetica;
+      font-size: 38px;
+      font-weight: 400;
+      letter-spacing: 0;
+      line-height: normal;
+      margin-top: -1px;
+      min-height: 76px;
+      top: 50px;
+      left: 160px;
+     }
+
+    #logo2 {
+      position: absolute;
+      color: #2a8a09;
+      font-family: "Khand", Helvetica;
+      font-size: 38px;
+      font-weight: 400;
+      letter-spacing: 0;
+      line-height: normal;
+      margin-top: -1px;
+      min-height: 76px;
+      top: 85px;
+      left: 160px;
+    }
+    
+    #email {
+     position: absolute;
+     color:white;
+     font-family: "Inter", Helvetica;
+     font-size: 20px;
+     top: 40px;
+     left: 100px;
+    }
+
+    #phoneNumber {
+     position: absolute;
+     color:white;
+     font-family: "Inter", Helvetica;
+     font-size: 20px;
+     top: 40px;
+     left: 500px;
+    }
+
+    #address {
+     position: absolute;
+     color:white;
+     font-family: "Inter", Helvetica;
+     font-size: 20px;
+     top: 40px;
+     left: 840px;  
+    }
+    
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hornet Helpers</title>
+  </head>
+  <body>
+   
+    <img id="background" src="https://cdn.animaapp.com/projects/6620354164a667b0f90585ee/releases/6620361d1158c045fb50b5b6/img/faeb9smxiaey7kk-1.png"/>
+   
+    <div class="upperFrame"> 
+      <div id="welcome">A volunteer and event management portal from the Sacramento State Career Center</div> 
+      <button id = "regBtn">Register</button>
+      <button id = "logBtn">Login</button>
+   </div>
+    
+   <div class="lowerFrame">
+      <p id="email"><u>Email: careercenter@csus.edu</u></p>
+      <p id="phoneNumber"><u>Phone: (916) 278-6231</u></p>
+      <p id="address"><u>Address: 6000 J Street, Sacramento, CA 95819</u></p>
+   </div>
+   
+   <div id="h-1">H</div>
+   <div id="logo1">ORNET</div>
+   <div id="logo2">ELPERS</div>
+   
+   <script src="../scripts/main.js"></script>
+  </body>
 </html>
+
+
+
+
+
+
+
+
+
+
