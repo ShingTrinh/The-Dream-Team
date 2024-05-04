@@ -39,7 +39,7 @@ function createEventBlock(event) {
     <p>${event.description}</p>
     <p>Date: ${event.date.substring(0,10)}</p>
     <p>Time: ${event.time}</p>
-    <p>Categories: ${event.categories}</p>
+    <p>Categories: ${[event.categories]}</p>
     <button>Join</button>
   `
           

@@ -15,56 +15,60 @@ function signOut() {
   console.log("SIGNOUT!");
   window.location.href = "../views/hh_login_page.html";
 }
+getAllEvents();
 
-
-function fetchEvents() {
-  fetch('/getEvents')
-      .then(function(response) {
+function getAllEvents(){
+  fetch('/events')
+  .then(response => {
+      if (response.ok) {
           return response.json();
-      })
-      .then(function(events) {
-          displayEvents(events);
-      })
-      .catch(function(error) {
-          console.error('Error fetching events:', error);
-      });
+      }
+      throw new Error('Failed to fetch events.');
+  })
+  .then(data => {
+      console.log(data);
+      displayEvents(data);
+      // Do something with the data, such as displaying it on the page
+  })
+  .catch(error => {
+      console.error('Error fetching events:', error);
+      // Handle errors, such as displaying an error message to the user
+  });
 }
 
 function displayEvents(events) {
-  var eventContainer = document.getElementById('eventContainer');
-
-  eventContainer.innerHTML = ''; 
-
-  if (events.length === 0) {
-      eventContainer.innerHTML = '<p>No events found</p>';
-  } else {
-      events.forEach(function(event) {
+    var eventContainer = document.getElementById('eventContainer');
+    
+    eventContainer.innerHTML = ''; 
+    
+    if (events.length === 0) {
+        eventContainer.innerHTML = '<p>No events found</p>';
+    } else {
+          events.forEach(function(event) {
           var eventBlock = createEventBlock(event);
           eventContainer.appendChild(eventBlock);
-      });
-  }
-}
+        });
+      }
+    }
 
 function createEventBlock(event) {
   const eventBlock = document.createElement('div');
   eventBlock.classList.add('event');
 
   eventBlock.innerHTML = `
-    <h3>ID: ${event.id}</h3>
     <h3>${event.title}</h3>
     <p>${event.description}</p>
     <p>Date: ${event.date.substring(0,10)}</p>
     <p>Time: ${event.time}</p>
-    <p>Categories: ${event.categories}</p>
+    <p>Categories: ${[event.categories]}</p>
     
     <button class="open-modal-btn" data-modal-target="#modal">Edit</button>
     <div class="modal" id="modal">
-      <div class="modal-header">
-        <div class="title">Example Modal</div>
-        <button data-close-button class="close-button">&times;</button>
-      </div>
-      <div class="modal-body">
-      </div>`;
+    <div class="modal-header">
+    <div class="title">Example Modal</div>
+    <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body"></div>`;
 
   const openModalButton = eventBlock.querySelector('.open-modal-btn');
   openModalButton.addEventListener('click', () => {
@@ -85,7 +89,7 @@ function showEditForm(event) {
   const modalTitle = modal.querySelector('.title');
   const modalBody = modal.querySelector('.modal-body');
 
-  modalTitle.textContent = "Event ID: " + event.id;
+  modalTitle.textContent = "Event ID: " + event._id;
 
   modalBody.innerHTML = `
     <label for="title">Title</label>
@@ -130,36 +134,23 @@ function showEditForm(event) {
   
 }
 
-function saveChangesToDatabase(event) {
-  console.log('Event before sending:', event);
-
-  fetch('/updateEvent', {
-      method: 'POST',
-      headers: {
-          'Content-Type': 'application/json' // Set content type to JSON
-      },
-      body: JSON.stringify(event) // Stringify the event object
-  })
-  .then(response => {
+async function saveChangesToDatabase(event) {
+  try {
+      const response = await fetch(`/events/${event._id}`, { 
+          method: 'PUT',
+          headers: {
+              'Content-Type': 'application/json' // Set content type to JSON
+          },
+          body: JSON.stringify(event) // Stringify the event object
+      });
       if (!response.ok) {
           throw new Error('Failed to save changes');
       }
-      console.log("HELLO IT WORKS\n");
       window.location.reload();
-  })
-  .catch(error => {
+  } catch (error) {
       console.error('Error saving changes:', error);
-  });
+  }
 }
-
-
-
-
-
-
-
-
-
 
 
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
@@ -198,5 +189,3 @@ function closeModal(modal) {
   modal.classList.remove('active')
   overlay.classList.remove('active')
 }
-
-fetchEvents();

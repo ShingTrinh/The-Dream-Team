@@ -70,7 +70,6 @@ body {
     margin-top: 115px; /* Adjust the distance between text and underline */
   }
   
-  
   .event {
     display: inline-block;
     width: calc(48% - 20px);

@@ -5,7 +5,7 @@ const exit = document.getElementById("xbtn");
 exit.addEventListener("click", exitClicked);
 
 function exitClicked(){
-    window.location.href = "../WelcomePage/index.html";
+    window.location.href = "../views/adminEvent.html";
 }
 
 function SubmitClicked(){

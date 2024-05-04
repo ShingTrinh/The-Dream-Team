@@ -30,18 +30,27 @@ const createNewEvent = async (req, res) => {
 }
 
 const updateEvent = async (req, res) => {
-    if (!req?.body?.id) {
-        return res.status(400).json({ 'message': 'ID parameter is required.' });
-    }
+    try {
+        const { title, date, description, time, categories } = req.body;
 
-    const event = await Event.findOne({ _id: req.body.id }).exec();
-    if (!event) {
-        return res.status(204).json({ "message": `No event matches ID ${req.body.id}.` });
+        const event = await Event.findById(req.body.id);
+
+        if (!event) {
+            return res.status(204).json({ message: `No event matches ID ${req.body.id}.` });
+        }
+        if (title) event.title = title;
+        if (date) event.date = date;
+        if (description) event.description = description;
+        if (time) event.time = time;
+        if (categories) event.categories = categories;
+
+        const result = await event.save();
+
+        res.json(result);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Internal Server Error' });
     }
-    if (req.body?.firstname) event.firstname = req.body.firstname;
-    if (req.body?.lastname) event.lastname = req.body.lastname;
-    const result = await event.save();
-    res.json(result);
 }
 
 const deleteEvent = async (req, res) => {
@@ -71,4 +80,4 @@ module.exports = {
     updateEvent,
     deleteEvent,
     getEvent
-}
+};
